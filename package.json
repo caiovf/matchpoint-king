@@ -4,17 +4,20 @@
   "description": "Clone do tabNews",
   "main": "index.js",
   "scripts": {
-    "dev": "next dev"
+    "dev": "next dev",
+    "lint:check": "prettier --check .",
+    "lint:fix": "prettier --write ."
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
     "next": "^13.1.6",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "devDependencies": {
+    "react-dom": "^18.2.0",
     "react-markdown": "^9.0.1",
     "remark-gfm": "^4.0.0"
+  },
+  "devDependencies": {
+    "prettier": "^3.4.2"
   }
 }

@@ -1,6 +1,6 @@
-import React from 'react';
-import Markdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
+import React from "react";
+import Markdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 const markdown = `
 # Prezado Vinicius,
@@ -51,9 +51,9 @@ Com muito respeito, admiração e aquele toque de bom humor que não pode faltar
 function Home() {
   return (
     <>
-        <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
+      <div style={{ padding: "20px", fontFamily: "Arial, sans-serif" }}>
         <Markdown remarkPlugins={[remarkGfm]}>{markdown}</Markdown>
-        </div>
+      </div>
     </>
   );
 }
