@@ -1,7 +1,7 @@
 {
-  "name": "clone-tabnews.com.br",
+  "name": "matchpointking.com.br",
   "version": "1.0.0",
-  "description": "Clone do tabNews",
+  "description": "Match Point King",
   "main": "index.js",
   "scripts": {
     "dev": "next dev",
