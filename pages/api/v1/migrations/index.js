@@ -4,6 +4,7 @@ import database from "infra/database.js";
 
 async function migrations(request, response) {
   const allowedMethods = ["GET", "POST"];
+  let dbClient;
 
   if (!allowedMethods.includes(request.method)) {
     return response
@@ -15,7 +16,7 @@ async function migrations(request, response) {
       ])
       .end();
   }
-  let dbClient;
+
   try {
     dbClient = await database.getNewClient();
 
