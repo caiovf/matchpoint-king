@@ -1,0 +1,77 @@
+.status {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  padding: 0 15px;
+}
+
+.status .sectionHeader {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.status .sectionHeader h1,
+.status .sectionHeader h2 {
+  margin: 0;
+}
+
+.status .sectionHeader h1 {
+  font-size: 32px;
+  margin-bottom: 4px;
+}
+
+.status .sectionHeader h2 {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.status .sectionContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.status .sectionContent > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0;
+  margin: 0;
+}
+
+.status .sectionContent > ul > li {
+  padding: 24px 48px;
+  margin: 0;
+  background: #e0e0e0;
+  border-radius: 16px;
+}
+
+.status .sectionContent ul li {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 16px;
+  color: #212121;
+}
+
+.status .sectionContent ul li span {
+  font-weight: 700;
+}
+
+.status .sectionContent ul li strong {
+  font-size: 24px;
+}
+
+.status .sectionContent ul li ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0;
+}
+
+.status .sectionContent ul li ul li {
+  flex-direction: row;
+  justify-content: space-between;
+}
