@@ -36,14 +36,14 @@ describe("GET /api/v1/users/[username]", () => {
         id: response2Body.id,
         username: "mesmoCaso",
         email: "mesmo.caso@gmail.com",
-        password: "senha123",
-        createdAt: response2Body.createdAt,
-        updatedAt: response2Body.updatedAt,
+        password: response2Body.password,
+        created_at: response2Body.created_at,
+        updated_at: response2Body.updated_at,
       });
 
       expect(uuidVersion(response2Body.id)).toBe(4);
-      expect(Date.parse(response2Body.createdAt)).not.toBeNaN();
-      expect(Date.parse(response2Body.updatedAt)).not.toBeNaN();
+      expect(Date.parse(response2Body.created_at)).not.toBeNaN();
+      expect(Date.parse(response2Body.updated_at)).not.toBeNaN();
     });
 
     test("Com um caso diferente", async () => {
@@ -73,14 +73,14 @@ describe("GET /api/v1/users/[username]", () => {
         id: response2Body.id,
         username: "casoDiferente",
         email: "caso.diferente@gmail.com",
-        password: "senha123",
-        createdAt: response2Body.createdAt,
-        updatedAt: response2Body.updatedAt,
+        password: response2Body.password,
+        created_at: response2Body.created_at,
+        updated_at: response2Body.updated_at,
       });
 
       expect(uuidVersion(response2Body.id)).toBe(4);
-      expect(Date.parse(response2Body.createdAt)).not.toBeNaN();
-      expect(Date.parse(response2Body.updatedAt)).not.toBeNaN();
+      expect(Date.parse(response2Body.created_at)).not.toBeNaN();
+      expect(Date.parse(response2Body.updated_at)).not.toBeNaN();
     });
 
     test("Com usuário que não existe", async () => {
