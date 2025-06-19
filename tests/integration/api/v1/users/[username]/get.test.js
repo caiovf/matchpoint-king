@@ -10,19 +10,11 @@ beforeAll(async () => {
 describe("GET /api/v1/users/[username]", () => {
   describe("Usuário Anônimo", () => {
     test("Com um caso exato", async () => {
-      const response1 = await fetch("http://localhost:3000/api/v1/users", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          username: "mesmoCaso",
-          email: "mesmo.caso@gmail.com",
-          password: "senha123",
-        }),
+      await orchestrator.createUser({
+        username: "mesmoCaso",
+        email: "mesmo.caso@gmail.com",
+        password: "senha123",
       });
-
-      expect(response1.status).toBe(201);
 
       const response2 = await fetch(
         "http://localhost:3000/api/v1/users/mesmoCaso",
@@ -47,19 +39,11 @@ describe("GET /api/v1/users/[username]", () => {
     });
 
     test("Com um caso diferente", async () => {
-      const response1 = await fetch("http://localhost:3000/api/v1/users", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          username: "casoDiferente",
-          email: "caso.diferente@gmail.com",
-          password: "senha123",
-        }),
+      await orchestrator.createUser({
+        username: "casoDiferente",
+        email: "caso.diferente@gmail.com",
+        password: "senha123",
       });
-
-      expect(response1.status).toBe(201);
 
       const response2 = await fetch(
         "http://localhost:3000/api/v1/users/casodiferente",
